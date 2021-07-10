@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Home</title>
+	</head>
+	<body>
+		<h1>Gamified Marketing Home Page</h1>
+		<p
+		th:text="${'Welcome back!!! ' + session.user.name + ' ' + session.user.surname}"></p>
+		<h3>Product of the day:</h3>
+		
+	</body>
+</html>
