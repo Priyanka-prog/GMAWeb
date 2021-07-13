@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Home</title>
+	</head>
+	<body>
+		<h1>Gamified Marketing Home Page</h1>
+		<h3>Marketing section</h3>
+		<form action="StatisticalSection" method="POST">	
+		<h3 th:text="${questionnaire}"></h3>
+			<table>
+				<thead>
+					<tr>
+						<th>Question</th>
+						<th>Answer</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="q : ${questions}">
+						<td th:text="${q.question}"></td>
+						<td><input type="text" id="answer" name="answer" value=""><br></td>
+					</tr>
+				</tbody>
+			</table>
+			<input type="submit" th:value="Next" id="continue" name="Continue">
+		</form>
+	</body>
+</html>

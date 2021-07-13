@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Product and Questionnaire Insertion</title>
+	</head>
+	<body>
+		<h1>Creation Page</h1>
+		<h3>Questionnaire creation for the product just inserted</h3>
+		<form action="CreateQuestionnaire" method="POST">
+			Questionnaire date: <input type="text" id="questionnaireDate" name="questionnaireDate"><br>
+			Number of question you want to add to the questionnaire: <input type="text" id="numberOfQuestions" name="numberOfQuestions"><br>
+			<input type="submit" value="Continue" id="sendQuestions" name="sendQuestions">
+		</form>
+	</body>
+</html>

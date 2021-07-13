@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>Inspection view of the selected questionnaire</title>
+	</head>
+	<body>
+		<h1>Inspection view of the selected questionnaire</h1>
+		
+		<h3>List of users that submitted the questionnaire:</h3>
+		<table>
+			<thead>
+				<tr>
+					<th>User ID</th>
+					<th>Username</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="u : ${users}">
+					<td th:text="${u.getID}"></td>
+					<td th:text="${u.getUsername}"></td>
+				</tr>
+			</tbody>
+		</table><br><br>
+		
+		<h3>List of the answers given by the users for the selected questionnaire:</h3>
+		<table  th:each="answs : ${answers}">
+			<thead>
+				<tr>
+					<th>Username</th>
+					<th>Question</th>
+					<th>Answer</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="a : ${answs}">
+					<td th:text="${a.getUser().getUsername()}"></td>
+					<td th:text="${a.getQuestion().getQuestion()}"></td>
+					<td th:text="${a.getAnswer()}"></td>
+				</tr>
+			</tbody>
+		</table><br><br>
+		
+		<h3>List of users that cancelled the questionnaire:</h3>
+		<table>
+			<thead>
+				<tr>
+					<th>User ID</th>
+					<th>Username</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="us : ${usersCanc}">
+					<td th:text="${us.getID}"></td>
+					<td th:text="${us.getUsername}"></td>
+				</tr>
+			</tbody>
+		</table><br><br>
+	</body>
+</html>

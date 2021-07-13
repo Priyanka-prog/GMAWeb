@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Add questions</title>
+	</head>
+	<body>
+		<h1>Add questions to the questionnaire</h1>
+		<form action="SubmitQuestions" method="POST">	
+			<table>
+				<thead>
+					<tr>
+						<th>  </th>
+						<th>Question</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="n : ${numberOfQuestions}">
+						<td><p>Insert question: </p></td>
+						<td><input type="text" id="question" name="question" value=""><br></td>
+					</tr>
+				</tbody>
+			</table>
+			<input type="submit" value="Submit Questionnaire" id="submitQuestionnaire" name="submitQuestionnaire">
+		</form>
+	</body>
+</html>

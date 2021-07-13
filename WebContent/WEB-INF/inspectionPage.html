@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Inspect a Questionnaire</title>
+	</head>
+	<body>
+		<h1>Inspection Page</h1>
+		<h3>Select the ID of the questionnaire you want to inspect</h3>
+		<form action="InspectQuestionnaire" method="POST">
+			Questionnaire ID: <input type="text" id="questionnaireID" name="questionnaireID"><br>
+			<input type="submit" value="Inspect Questionnaire" id="inspectQuestionnaire" name="inspectQuestionnaire">
+		</form>
+		<br><br>
+		<table>
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Date</th>
+					<th>Product</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="q : ${questionnaires}">
+					<td th:text="${q.getID()}"></td>
+					<td th:text="${q.getDate()}"></td>
+					<td th:text="${q.getProduct().getName()}"></td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>

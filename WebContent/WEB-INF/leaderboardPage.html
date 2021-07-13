@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Home</title>
+	</head>
+	<body>
+		<h3>Leaderboard of the questionnaire: </h3><br><br>
+		<table>
+			<thead>
+				<tr>
+					<th>Username</th>
+					<th>Points</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="l : ${leaderboards}">
+					<td th:text="${l.getUser().getUsername}"></td>
+					<td th:text="${l.getPoints()}"></td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>
