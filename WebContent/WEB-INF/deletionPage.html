@@ -24,7 +24,7 @@
 				<tr th:each="q : ${questionnaires}">
 					<td th:text="${q.getID()}"></td>
 					<td th:text="${q.getDate()}"></td>
-					<td th:text="${q.getProduct().getName()}"></td>
+					<td th:text="${q.getProduct().getPname()}"></td>
 				</tr>
 			</tbody>
 		</table>
