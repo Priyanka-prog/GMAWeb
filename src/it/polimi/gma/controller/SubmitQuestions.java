@@ -64,15 +64,17 @@ public class SubmitQuestions extends HttpServlet {
 		}
 		
 		String[] questions;
+		String[] questtype;
 		try {
 			questions = request.getParameterValues("question");
+			questtype = request.getParameterValues("questtype");
 		} catch (Exception e) {
 			response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Incorrect or missing param values");
 			return;
 		}
 		
 		QuestionnaireCreationService qcs = (QuestionnaireCreationService) session.getAttribute("QuestionnaireCreationService");
-		qcs.createQuestionnaire(questions);
+		qcs.createQuestionnaire(questions,questtype);
 		
 		String path = "/WEB-INF/adminPage.html";
 		ServletContext servletContext = getServletContext();

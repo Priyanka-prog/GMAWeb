@@ -22,7 +22,7 @@ import it.polimi.gma.exceptions.QuestionException;
 import it.polimi.gma.services.AnswerService;
 import it.polimi.gma.services.UserService;
 
-
+@javax.ejb.ApplicationException
 @WebServlet("/SubmitAnswers")
 public class SubmitAnswers extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -43,7 +43,7 @@ public class SubmitAnswers extends HttpServlet {
 		this.templateEngine.setTemplateResolver(templateResolver);
 		templateResolver.setSuffix(".html");
 	}
-
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String loginpath = getServletContext().getContextPath() + "/index.html";

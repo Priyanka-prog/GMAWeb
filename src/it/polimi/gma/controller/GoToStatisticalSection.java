@@ -37,8 +37,8 @@ public class GoToStatisticalSection extends HttpServlet {
 	@EJB(name = "it.polimi.gma.services/QuestionService")
 	private QuestionService questionService;
 	
-	//@EJB(name = "it.polimi.gma.services/QuestionnaireService")
-	//private QuestionnaireService questionnaireService;
+	@EJB(name = "it.polimi.gma.services/QuestionnaireService")
+	private QuestionnaireService questionnaireService;
 	
 	public GoToStatisticalSection() {
 		super();
