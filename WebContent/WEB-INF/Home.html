@@ -6,7 +6,8 @@
 	</head>
 	<body>
 		<h1>Gamified Marketing Application</h1>
-		<p>th:text="${'Welcome back!!! ' + session.user.username }"></p>
+			<p
+		th:text="${'Welcome!!! ' + session.user.username}"></p>
 		<h3>Product of the day:</h3>
 		<img width="150px" th:src="@{'data:image/png;base64,' + ${product.getPimage()}}" /><br><br>
 		<p>Name of the product: </p><h4 th:text="${product.pname}"></h4><br><br>
@@ -31,7 +32,7 @@
 			</thead>
 			<tbody>
 				<tr th:each="r : ${rev}">
-					<td th:text="${r.getUser().getUsername()}"></td>
+					<td th:text="${r.getUser().getUsername}"></td>
 					<td th:text="${r.getQuestion().getQuestion()}"></td>
 					<td th:text="${r.getAnswer()}"></td>
 				</tr>

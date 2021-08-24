@@ -34,7 +34,7 @@
 			</thead>
 			<tbody>
 				<tr th:each="a : ${answs}">
-					<td th:text="${a.getUser().getUsername()}"></td>
+					<td th:text="${a.getUser().getUsername}"></td>
 					<td th:text="${a.getQuestion().getQuestion()}"></td>
 					<td th:text="${a.getAnswer()}"></td>
 				</tr>
@@ -51,8 +51,8 @@
 			</thead>
 			<tbody>
 				<tr th:each="us : ${usersCanc}">
-					<td th:text="${us.getID}"></td>
-					<td th:text="${us.getUsername}"></td>
+					<td th:text="${us.getId()}"></td>
+					<td th:text="${us.getUsername()}"></td>
 				</tr>
 			</tbody>
 		</table><br><br>

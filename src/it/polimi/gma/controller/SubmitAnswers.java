@@ -66,7 +66,7 @@ public class SubmitAnswers extends HttpServlet {
 			response.sendError(HttpServletResponse.SC_BAD_REQUEST, e.getMessage());
 			return;
 		} catch (BadWordException e) {
-			user.setRole("Blocked");
+			user.setRole("BlockedUser");
 			try {
 				userService.updateUser(user);
 			} catch (Exception e1) {
