@@ -74,8 +74,11 @@ public class CheckLogin extends HttpServlet {
 			if (user.getRole().equals("Admin")) {
 				path = getServletContext().getContextPath() + "/AdminPage";
 			}
-			else {
+			else if (user.getRole().equals("ActiveUser")){
 				path = getServletContext().getContextPath() + "/Home";
+			}
+			else{
+				path= getServletContext().getContextPath() +"/Blocked";
 			}
 			response.sendRedirect(path);
 		}
