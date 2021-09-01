@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="mystyle.css">
+	<title>Sign up page</title>
+</head>
+
+<body>
+	<h1>Welcome to the Gamified Marketing application</h1><br>
+	<h2>Enter below details to Sign up:</h2>
+	<form action="Subscribe" method="POST">
+		Username: <input type="text" name="username" required> <br><br><br>
+		Password: <input type="password" name="passwd" required><br><br><br>
+		e-mail: <input type="text" name="email" required> <br><br><br>
+		<input type="submit" value="sign up">
+		<p th:text=" ${errorMsg}"></p>
+	</form>
+</body>
+</html>
