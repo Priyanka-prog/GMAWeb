@@ -10,7 +10,7 @@
 	<h1>Welcome to the Gamified Marketing application</h1>
 	<h2>Please insert your credentials to login:</h2>
 	<form action="CheckLogin" method="POST">
-		Username: <input type="text" name="usr" required> <br> <br>
+		Username: <input type="text" name="username" required> <br> <br>
 		Password: <input type="password" name="pwd" required> <br> <br> <br>
 		<input type="submit" value="login">
 		<p th:text=" ${errorMsg}"></p>

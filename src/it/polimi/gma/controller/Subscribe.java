@@ -18,7 +18,7 @@ import it.polimi.gma.services.UserService;
 public class Subscribe extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-	@EJB(name = "it.polimi.db2.services/UserService")
+	@EJB(name = "it.polimi.gma.services/UserService")
 	private UserService userService;
 	
     public Subscribe() {
